@@ -32,14 +32,22 @@
 #echo "my second favourite fruit is: ${Fruits[1]}"
 #echo "my favourite fruits are : ${Fruits[@]}"
 
-num1=$1
-num2=$2
+#num1=$1
+#num2=$2
+#
+#sum=$(($num1+$num2))
+#
+#
+#echo " sum of given numbers is : $sum"
 
-sum=$(($num1+$num2))
+#!/bin/bash
 
-echo " sum of given numbers is : $sum"
+NO1=$1
+NO2=$2
 
+SUM=$(($NO1+$NO2))
 
+echo "Total of $NO1 and $NO2 is: $SUM"
 
 
 
