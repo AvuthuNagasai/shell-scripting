@@ -46,7 +46,7 @@ NO1=$1
 NO2=$2
 
 SUM=$((NO1+NO2))
-Difference=$((NO1-N02))
+Difference=$((NO1-NO2))
 echo "Difference = $Difference"
 
 echo "Total of $NO1 and $NO2 is:: $SUM"
