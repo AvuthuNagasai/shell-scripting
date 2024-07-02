@@ -26,11 +26,20 @@
 
 
 # shellcheck disable=SC1036
-Fruits=("banana" "apple" "orange" "grapes" "mango")
+#Fruits=("banana" "apple" "orange" "grapes" "mango")
+#
+#echo "my first favourite fruit is: ${Fruits[0]}"
+#echo "my second favourite fruit is: ${Fruits[1]}"
+#echo "my favourite fruits are : ${Fruits[@]}"
 
-echo "my first favourite fruit is: ${Fruits[0]}"
-echo "my second favourite fruit is: ${Fruits[1]}"
-echo "my favourite fruits are : ${Fruits[@]}"
+num1=$1
+num2=$2
+
+sum=$(($num1+$num2))
+
+echo " sum of given numbers is : $sum"
+
+
 
 
 
