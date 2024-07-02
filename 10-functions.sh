@@ -12,17 +12,25 @@
 
 
 #!/bin/bash
+#
+#echo "Please enter username::"
+#
+#read -s USERNAME #here USERNAME is variable
+#
+#echo "Please enter password::"
+#
+#read -s PASSWORD
+#
+#echo "Username is: $USERNAME, Password is: $PASSWORD"
 
-echo "Please enter username::"
 
-read -s USERNAME #here USERNAME is variable
 
-echo "Please enter password::"
+# shellcheck disable=SC1036
+Fruits=("banana""apple" "orange" "grapes" "mango")
 
-read -s PASSWORD
-
-echo "Username is: $USERNAME, Password is: $PASSWORD"
-
+echo "my first favourite fruit is: ${Fruits[0]}"
+echo "my second favourite fruit is: ${Fruits[1]}"
+echo "my favourite fruits are : ${Fruits[@]}"
 
 
 
