@@ -2,10 +2,13 @@
 
 echo "Hi, i am learning devops"
 
-echo "Person1: hi , how are you ?"
-echo "Person2: fine, how are you doing?"
-echo "nice to see you!!"
-echo "see you, bye bye!"
+Person1=$1
+person2=$2
+
+echo "$Person1: hi , how are you ?"
+echo "$Person2: fine, how are you doing?"
+echo "$Person1:nice to see you!!"
+echo "$Person2:see you, bye bye!"
 
 
 
