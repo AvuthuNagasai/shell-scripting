@@ -6,7 +6,8 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 USERID=$(id -u)
 
-if [ USERID -ne 0 ]
+# shellcheck disable=SC2170
+if [ $USERID -ne 0 ]
 then
    echo "Please run this script with root access."
 else
@@ -25,10 +26,10 @@ fi
 
 }
 
-dnf install mysql -y $>>LOGFILE
-VALIDATE $? "Installing MySQL"
-dnf install nginx -y $>>LOGFILE
-VALIDATE $? "Installing Nginx"
+dnf install mongodb -y $>>LOGFILE
+VALIDATE $? "Installing mongodb"
+dnf install nodejs -y $>>LOGFILE
+VALIDATE $? "Installing nodejs"
 
 
 
