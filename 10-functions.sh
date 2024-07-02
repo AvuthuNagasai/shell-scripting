@@ -3,7 +3,7 @@
 echo "Hi, i am learning devops"
 
 Person1=$1
-person2=$2
+Person2=$2
 
 echo "$Person1: hi , how are you ?"
 echo "$Person2: fine, how are you doing?"
