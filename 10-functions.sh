@@ -1,0 +1,1 @@
+echo "Hi, i am learning devops"
