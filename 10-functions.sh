@@ -26,7 +26,7 @@
 
 
 # shellcheck disable=SC1036
-Fruits=("banana""apple" "orange" "grapes" "mango")
+Fruits=("banana" "apple" "orange" "grapes" "mango")
 
 echo "my first favourite fruit is: ${Fruits[0]}"
 echo "my second favourite fruit is: ${Fruits[1]}"
