@@ -14,7 +14,7 @@ else
 fi
 
 
-validate(){
+VALIDATE(){
 if [ $1 -ne 0 ]
 then
     echo "Installation of mysql...FAILURE"
