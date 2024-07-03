@@ -20,7 +20,7 @@ fi
 
 for i in $@
 do
-    echo -e" $G package to install: $i"
+    echo -e " $G package to install: $i"
     dnf list installed $i &>>LOGFILE
     if [ $? -ne 0 ]
        then
@@ -28,5 +28,6 @@ do
     else
       echo -e " $C ********* $i $R is not installed $C ******"
       dnf install $i -y
+      echo -e " $R **** $Y $i is already installed successfully $R******"
     fi
 done
