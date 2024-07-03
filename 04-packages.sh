@@ -28,6 +28,14 @@ do
     else
       echo -e " $C ********* $i $R is not installed $C ******"
       dnf install $i -y
-      echo -e " $R **** $Y $i is already installed successfully $R******"
+      VALIDATE(){
+         if [ $1 -ne 0 ]
+         then
+              echo "$2...FAILURE"
+              exit 1
+          else
+              echo "$2...installed successfully"
+          fi
+      }
     fi
 done
