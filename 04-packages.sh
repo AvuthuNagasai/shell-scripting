@@ -8,7 +8,7 @@ LOGFILE=/tmp/$SCRIPT_NAME$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-C="\[36m"
+C="\e[36m"
 
 if [ $USERID -ne 0 ]
 then
@@ -20,7 +20,7 @@ fi
 
 for i in $@
 do
-    echo "package to install: $i"
+    echo -e" $G package to install: $i"
     dnf list installed $i &>>LOGFILE
     if [ $? -ne 0 ]
        then
