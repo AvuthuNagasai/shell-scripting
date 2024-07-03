@@ -12,7 +12,7 @@ C="\[36m"
 
 if [ $USERID -ne 0 ]
 then
-  echo -e "$R you must rin the code as a super user"
+  echo -e "$R you must run the code as a super user"
   exit 1
 else
   echo -e "$Y you are a super user"
@@ -26,7 +26,7 @@ do
        then
       echo -e " $R **** $Y $i is already installed $R******"
     else
-      echo -e " $R ********* $C $i not installed $R ******"
+      echo -e " $C ********* $i $R is not installed $C ******"
       dnf install $i -y
     fi
 done
