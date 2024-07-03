@@ -36,9 +36,7 @@ do
       echo -e " $R **** $Y $i is already installed $R******"
     else
       echo -e " $C ********* $i $R is not installed $C ******"
-      then
       dnf install $i -y
       VALIDATE $?
-
     fi
 done
