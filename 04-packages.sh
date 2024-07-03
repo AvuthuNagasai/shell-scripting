@@ -5,10 +5,10 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME$TIMESTAMP.log
 
-R= \e[31m
-G= \e[32m
-Y= \e[33m
-c= \e[36m
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+C="\[36m"
 
 if [ $USERID -ne 0 ]
 then
@@ -26,7 +26,7 @@ do
     then
       echo " $i is already installed"
     else
-      echo -e "$c $i not installed"
+      echo -e "$i not installed"
       dnf install $i
     fi
 done
