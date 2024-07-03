@@ -26,7 +26,7 @@ do
        then
       echo -e " $R **** $Y $i is already installed $R******"
     else
-      echo -e "$R ******* $C $i not installed $R ******"
+      echo -e "$R ********* $C $i not installed $R ******"
       dnf install $i
     fi
 done
