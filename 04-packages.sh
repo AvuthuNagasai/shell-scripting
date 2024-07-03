@@ -5,6 +5,15 @@ TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME$TIMESTAMP.log
 
+VALIDATE(){
+   if [ $1 -ne 0 ]
+   then
+        echo "$2...FAILURE"
+        exit 1
+    else
+        echo "$2...SUCCESS"
+    fi
+}
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
@@ -27,15 +36,9 @@ do
       echo -e " $R **** $Y $i is already installed $R******"
     else
       echo -e " $C ********* $i $R is not installed $C ******"
+      then
       dnf install $i -y
-      VALIDATE(){
-         if [ $1 -ne 0 ]
-         then
-              echo "$2...FAILURE"
-              exit 1
-          else
-              echo "$2...installed successfully"
-          fi
-      }
+      VALIDATE $?
+
     fi
 done
