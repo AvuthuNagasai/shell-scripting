@@ -22,8 +22,8 @@ for i in $@
 do
     echo "package to install: $i"
     dnf list installed $i &>>LOGFILE
-    if[$? -eq o]
-    then
+    if [ $? -ne 0 ]
+       then
       echo " $i is already installed"
     else
       echo -e "$i not installed"
