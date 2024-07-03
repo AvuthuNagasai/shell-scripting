@@ -30,4 +30,3 @@ do
       dnf install $i
     fi
 done
-
