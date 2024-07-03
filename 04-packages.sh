@@ -8,11 +8,11 @@ LOGFILE=/tmp/$SCRIPT_NAME$TIMESTAMP.log
 R= \e[31m
 G= \e[32m
 Y= \e[33m
-
+c= \e[36m
 
 if [ $USERID -ne 0 ]
 then
-  echo "you must rin the code as a super user"
+  echo -e "$R you must rin the code as a super user"
   exit 1
 else
   echo "you are a super user"
@@ -26,7 +26,7 @@ do
     then
       echo " $i is already installed"
     else
-      echo "$i need to be installed"
+      echo -e "$c $i not installed"
       dnf install $i
     fi
 done
