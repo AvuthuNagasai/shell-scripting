@@ -15,7 +15,7 @@ then
   echo -e "$R you must rin the code as a super user"
   exit 1
 else
-  echo "you are a super user"
+  echo -e "$Y you are a super user"
 fi
 
 for i in $@
@@ -24,9 +24,9 @@ do
     dnf list installed $i &>>LOGFILE
     if [ $? -ne 0 ]
        then
-      echo " $i is already installed"
+      echo -e " $R **** $Y $i is already installed $R******"
     else
-      echo -e "$i not installed"
+      echo -e "$R ******* $C $i not installed $R ******"
       dnf install $i
     fi
 done
